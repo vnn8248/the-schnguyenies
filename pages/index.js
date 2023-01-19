@@ -1,8 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
 import { fetchAPI } from "../lib/api";
-
 import Seo from "../components/seo";
 import Layout from "../components/layout";
 import Message from "../components/message";
@@ -20,7 +18,7 @@ const Home = ({ homepage, pastEventPhotos }) => {
     <Layout >
       <Seo seo={homepage.attributes.seo} />
       <div className={`container ${styles.hero}`}>
-        <Image src="/danang.png" alt="Jessie and Bi in Da Nang, Vietnam" priority />
+        <Image src="/danang.png" alt="Jessie and Bi in Da Nang, Vietnam" priority/>
       </div>
       <Message context={homepage.attributes.message}/>
       <Countdown targetDate={marriageDate}/>
@@ -43,8 +41,6 @@ export async function getStaticProps() {
       populate: "*"
     })
   ]);
-
-  console.log(pastEventPhotos);
 
   return {
     props: {
