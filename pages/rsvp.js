@@ -181,15 +181,16 @@ function Registry({ guestList, dcInfo, ashInfo }) {
 
 export async function getStaticProps() {
     // Get master guest list
-    const target = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
-    const jwt = new google.auth.JWT(
-        process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
-        null,
-        (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
-        target
+    const scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+    const credentials = JSON.parse(
+        Buffer.from(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'base64').toString()
     );
+    const auth = new google.auth.GoogleAuth({
+        credentials,
+        scopes
+    });
 
-    const sheets = google.sheets({ version: 'v4', auth: jwt });
+    const sheets = google.sheets({ version: 'v4', auth });
 
     const range = 'A:B';
 
