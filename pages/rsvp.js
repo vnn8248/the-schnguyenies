@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { google } from "googleapis";
 import { Buffer } from "buffer";
+import { decode } from 'js-base64';
 import { fetchAPI } from "../lib/api";
 import Layout from "../components/layout";
 import Button from 'react-bootstrap/Button';
@@ -185,8 +186,9 @@ export async function getStaticProps() {
     // Get master guest list
     const scopes = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
     const credentials = JSON.parse(
-        Buffer.from(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'base64').toString('ascii')
+        Buffer.from(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'base64').toString()
     );
+    console.log(credentials);
     const auth = new google.auth.GoogleAuth({
         credentials,
         scopes
