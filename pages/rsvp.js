@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { google } from "googleapis";
+import { fetchAPI } from "../lib/api";
 import Layout from "../components/layout";
 import Button from 'react-bootstrap/Button';
 import DcRsvp from '../components/dcRsvp';
