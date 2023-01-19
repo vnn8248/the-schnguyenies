@@ -8,7 +8,6 @@ import Layout from "../components/layout";
 import Message from "../components/message";
 import Countdown from "../components/countdown";
 import Timeline from "../components/timeline";
-import danang from "../public/danang.png";
 import styles from "../styles/Home.module.css";
 
 
@@ -21,7 +20,7 @@ const Home = ({ homepage, pastEventPhotos }) => {
     <Layout >
       <Seo seo={homepage.attributes.seo} />
       <div className={`container ${styles.hero}`}>
-        <Image src={danang} alt="Jessie and Bi in Da Nang, Vietnam" priority />
+        <Image src="/danang.png" alt="Jessie and Bi in Da Nang, Vietnam" priority />
       </div>
       <Message context={homepage.attributes.message}/>
       <Countdown targetDate={marriageDate}/>
