@@ -1,7 +1,0 @@
-{
-    "build": {
-        "env": {
-            "GOOGLE_APPLICATION_CREDENTIALS": "@google-application-credentials"
-        }
-    }
-}
