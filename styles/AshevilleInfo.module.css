@@ -1,0 +1,42 @@
+.container {
+    border: 10px double black;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.container h1 {
+    margin-bottom: 1.5rem;
+}
+
+.container h3 {
+    margin-top: 2rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 2.5rem;
+    }
+
+    .container h2,
+    .container h3 {
+        font-size: 2rem;
+    }
+
+    .container ol {
+        padding-left: 4rem;
+    }
+
+    .container li {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        margin-top: 0;
+    }
+}

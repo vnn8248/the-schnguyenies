@@ -1,0 +1,28 @@
+.navbar {
+    border-bottom: 1px solid rgba(61, 64, 91, .1);
+    box-shadow: 0 3px 8px rgb(61 64 91 / 5%);
+}
+
+@media (min-width: 576px) {
+    .brand {
+        font-size: 1.75rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+
+
+    .navbar a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .brand {
+        font-size: 2rem;
+    }
+
+    .link {
+        font-size: 1.25rem;
+    }
+}

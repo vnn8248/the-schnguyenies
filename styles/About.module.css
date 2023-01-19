@@ -1,0 +1,61 @@
+.container {
+    padding-top: 2%;
+}
+
+.card .img {
+    width: 100%;
+    transition: 0.3s;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card {
+    border-radius: 12px;
+    margin-bottom: 6%;
+    background: #fff;
+    box-shadow: 10px 10px 24px -12px rgba(0, 0, 0, 0.75);
+    transition: 0.3s;
+}
+
+.card:hover img {
+    transform: scale(0.95);
+}
+
+.myMasonryGrid {
+    display: -webkit-box;
+    /* Not needed if autoprefixing */
+    display: -ms-flexbox;
+    /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px;
+    /* gutter size offset */
+    width: auto;
+}
+
+.myMasonryGridColumn {
+    padding-left: 30px;
+    /* gutter size */
+    background-clip: padding-box;
+}
+
+/* Style your items */
+/* change div to reference your elements you put in <Masonry> */
+/* .myMasonryGridColumn>div {
+    background: grey;
+    margin-bottom: 30px;
+} */
+
+.startHere {
+    background-color: #007E79;
+    border-radius: 8px;
+    color: white;
+}
+
+.startHere h5 {
+    color: white;
+}
+
+.roundedBottom {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

@@ -1,0 +1,123 @@
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+.container {
+    border: 1px solid rgba(61, 64, 91, .1);
+    box-shadow: 0 3px 8px rgb(61 64 91 / 5%);
+    background-image: url('/whitesands.png');
+    background-position: center;
+    height: 100vh;
+    position: relative;
+}
+
+.wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.nextEvent {
+    text-align: center;
+    font-size: 1.8rem;
+    color: black;
+}
+
+/* Countdown timer */
+
+.showCounter {
+    padding: 0.5rem;
+}
+
+.showCounter .countdownContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    padding: 0;
+    border: 10px double black;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    color: #000;
+    margin: auto;
+    max-width: 100%;
+}
+
+.showCounter .countdown {
+    line-height: 1.25rem;
+    padding: 0.25rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Number i.e. 60, 12 */
+.showCounter .countdown>p {
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+/* Unit i.e. days, hours, etc. */
+.showCounter .countdown>span {
+    text-transform: uppercase;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .nextEvent {
+        font-size: 2rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .nextEvent {
+        font-size: 3rem;
+    }
+
+    .showCounter .countdown {
+        margin: 10px;
+    }
+
+    /* Number i.e. 60, 12 */
+    .showCounter .countdown>p {
+        font-size: 2rem;
+    }
+
+    /* Unit i.e. days, hours, etc. */
+    .showCounter .countdown>span {
+        margin-top: 1rem;
+    }
+
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .nextEvent {
+        font-size: 3.5rem;
+    }
+
+    /* Number i.e. 60, 12 */
+    .showCounter .countdown>p {
+        font-size: 2.5rem;
+    }
+
+    /* Unit i.e. days, hours, etc. */
+    .showCounter .countdown>span {
+        margin-top: 1.5rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}

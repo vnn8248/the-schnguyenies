@@ -1,0 +1,116 @@
+.container {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.avatars {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: auto;
+}
+
+.avatarJ,
+.avatarB,
+.rings {
+    width: 50%;
+    height: 50%;
+}
+
+.soft {
+    font-size: 1rem;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formSignin {
+    width: 100%;
+    /* max-width: 400px; */
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.formSignin {
+    font-weight: 400;
+}
+
+.formSignin .formControl {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.formSignin .formControl:focus {
+    z-index: 2;
+}
+
+.formSignin .first {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.formSignin .last {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* RSVP forms */
+.containerIframe {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    border: 10px double black;
+}
+
+.responsiveIframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 576px) {
+    .containerRsvp {
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+    .containerIframe {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1200px) {}
+
+@media (min-width: 1400px) {
+
+    .avatarJ,
+    .avatarB,
+    .rings {
+        width: 75%;
+        height: 75%;
+    }
+
+    .soft {
+        font-size: 1.5rem;
+    }
+}

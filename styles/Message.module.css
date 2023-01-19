@@ -1,0 +1,102 @@
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+.container {
+    border: 10px double black;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: 100vh;
+    position: relative;
+}
+
+.content {
+    line-height: 1.75;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+
+.heading {
+    font-size: 1.5rem;
+}
+
+.subheading {
+    font-size: 1.25rem;
+}
+
+
+.heading,
+.subheading {
+    margin-bottom: 1rem;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        width: 75%;
+    }
+
+
+    .heading {
+        font-size: 2.5rem;
+    }
+
+    .subheading {
+        font-size: 1.75rem;
+    }
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .subheading {
+        font-size: 1.65rem;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        height: auto;
+    }
+
+    .content {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: translate(0, 0);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin: auto;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    .subheading {
+        font-size: 2rem;
+    }
+
+    .heading,
+    .subheading {
+        margin-bottom: 1.5rem;
+    }
+
+    .excerpt {
+        line-height: 2;
+        font-size: 1.25rem;
+    }
+}
