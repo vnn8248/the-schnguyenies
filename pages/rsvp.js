@@ -188,7 +188,6 @@ export async function getStaticProps() {
     const credentials = JSON.parse(
         Buffer.from(process.env.GOOGLE_APPLICATION_CREDENTIALS, 'base64').toString()
     );
-    console.log(credentials);
     const auth = new google.auth.GoogleAuth({
         credentials,
         scopes
