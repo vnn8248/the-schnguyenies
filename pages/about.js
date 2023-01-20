@@ -14,7 +14,6 @@ const breakpointColumnsObj = {
 };
 
 const About = ({ about }) => {
-    console.log(about);
     const storyPhotos = about.attributes.Photos;
     const storyBlocks = about.attributes.story;
 
