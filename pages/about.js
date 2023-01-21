@@ -7,7 +7,8 @@ import Message from '../components/message';
 import styles from '../styles/About.module.css';
 
 const breakpointColumnsObj = {
-    default: 4,
+    default: 5,
+    1300: 4,
     1100: 3,
     700: 2,
     500: 1
@@ -19,9 +20,11 @@ const About = ({ about }) => {
 
     return (
         <Layout>
-            <Message context={storyBlocks}/>
+            <div className={`container-fluid ${styles.containerMessage}`}>
+                <Message context={storyBlocks} />
+            </div>
             
-            <div className={`container ${styles.container}`}>
+            <div className={`container-fluid ${styles.container}`}>
                 <Masonry
                     breakpointCols={breakpointColumnsObj}
                     className={styles.myMasonryGrid}
@@ -35,10 +38,9 @@ const About = ({ about }) => {
 
                             // Cards with images, year, and description
                             if (image) {
-                                let imageDetails;
+                                const imageDetails = image.data.attributes;
         
                                 if (image && year && description) {
-                                    imageDetails = image.data.attributes;
         
                                     return (
                                         <div key={item.id} className="">
@@ -62,7 +64,6 @@ const About = ({ about }) => {
 
                                 // Cards with only images and description
                                 if (image && !year && description) {
-                                    imageDetails = image.attributes;
         
                                     return (
                                         <div key={item.id} className="">
@@ -84,8 +85,7 @@ const About = ({ about }) => {
                                 }
 
                                 // Cards with only images and year
-                                if (image && year && !description) {
-                                    imageDetails = image.attributes;
+                                if (image && !year && !description) {
         
                                     return (
                                         <div key={item.id} className="">
@@ -98,9 +98,6 @@ const About = ({ about }) => {
                                                     priority
                                                     className={`${styles.img} ${styles.roundedBottom}`}
                                                 />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{year}</h5>
-                                                </div>
                                             </div>
                                         </div>
                                     )
