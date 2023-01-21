@@ -35,6 +35,7 @@ const About = ({ about }) => {
                             const year = item.year;
                             const description = item.description;
                             const image = item.photo;
+                            const location = item.location;
 
                             // Cards with images, year, and description
                             if (image) {
@@ -54,7 +55,7 @@ const About = ({ about }) => {
                                                     className={styles.img}
                                                 />
                                                 <div className="card-body">
-                                                    <h5 className="card-title">{year}</h5>
+                                                    <h5 className="card-title">{`${year} - ${location}`}</h5>
                                                     <p className="card-text">{description}</p>
                                                 </div>
                                             </div>
@@ -84,7 +85,7 @@ const About = ({ about }) => {
                                     )
                                 }
 
-                                // Cards with only images and year
+                                // Cards with only images
                                 if (image && !year && !description) {
         
                                     return (
