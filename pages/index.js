@@ -8,7 +8,6 @@ import Countdown from "../components/countdown";
 import Timeline from "../components/timeline";
 import styles from "../styles/Home.module.css";
 
-
 const Home = ({ homepage, pastEventPhotos }) => {  
   const marriageDate = new Date("March 12, 2023").getTime();
   const ashevilleDate = new Date("June 24, 2023").getTime();
