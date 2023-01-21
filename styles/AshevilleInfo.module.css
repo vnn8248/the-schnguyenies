@@ -14,24 +14,11 @@
 
 @media (min-width: 576px) {
     .container {
-        padding: 20px;
-    }
-
-    .container h1 {
-        font-size: 2.5rem;
-    }
-
-    .container h2,
-    .container h3 {
-        font-size: 2rem;
+        padding: 40px;
     }
 
     .container ol {
         padding-left: 4rem;
-    }
-
-    .container li {
-        font-size: 1.25rem;
     }
 }
 
