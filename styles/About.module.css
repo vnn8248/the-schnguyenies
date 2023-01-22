@@ -40,13 +40,6 @@
     background-clip: padding-box;
 }
 
-/* Style your items */
-/* change div to reference your elements you put in <Masonry> */
-/* .myMasonryGridColumn>div {
-    background: grey;
-    margin-bottom: 30px;
-} */
-
 .startHere {
     background-color: #007E79;
     border-radius: 8px;
