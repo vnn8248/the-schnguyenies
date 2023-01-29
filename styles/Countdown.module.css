@@ -24,6 +24,7 @@ No media query for `xs` since this is the default in Bootstrap */
 }
 
 /* Countdown timer */
+
 .showCounter {
     padding: 0.5rem;
 }
