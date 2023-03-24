@@ -3,8 +3,9 @@ No media query for `xs` since this is the default in Bootstrap */
 .container {
     border: 1px solid rgba(61, 64, 91, .1);
     box-shadow: 0 3px 8px rgb(61 64 91 / 5%);
-    background-image: url('/whitesands.png');
+    background-image: url('/asheville.jpeg');
     background-position: center;
+    background-size: cover;
     height: 100vh;
     position: relative;
 }
@@ -20,7 +21,7 @@ No media query for `xs` since this is the default in Bootstrap */
 .nextEvent {
     text-align: center;
     font-size: 1.8rem;
-    color: black;
+    color: white;
 }
 
 /* Countdown timer */
@@ -37,10 +38,10 @@ No media query for `xs` since this is the default in Bootstrap */
     font-size: 1.5rem;
     line-height: 1.75rem;
     padding: 0;
-    border: 10px double black;
+    border: 10px double white;
     border-radius: 0.25rem;
     text-decoration: none;
-    color: #000;
+    color: white;
     margin: auto;
     max-width: 100%;
 }

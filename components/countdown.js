@@ -27,7 +27,7 @@ const Countdown = ({ targetDate }) => {
       <div className={`${styles.container}`}>
         <div className={styles.wrapper}>
           <h2 className={styles.nextEvent}>
-            White Sands National Park
+            Asheville, NC
           </h2>
           <ShowCounter
             days={days}
