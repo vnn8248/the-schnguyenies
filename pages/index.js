@@ -17,10 +17,24 @@ const Home = ({ homepage, pastEventPhotos }) => {
     <Layout >
       <Seo seo={homepage.attributes.seo} />
       <div className={`container ${styles.hero}`}>
-        <Image src="/danang.png" alt="Jessie and Bi in Da Nang, Vietnam" priority/>
+        {/* <Image 
+          src={homepage.attributes.hero.data.attributes.url} 
+          alt="Jessie and Bi are married at White Sands National Park" 
+          width={homepage.attributes.hero.data.attributes.width}
+          height={homepage.attributes.hero.data.attributes.height} 
+          priority
+          className="big"
+        /> */}
+        <Image 
+          src={process.env.HERO_IMG}
+          alt='Jessie and Bi are married at White Sands National Park'
+          width={6567}
+          height={4378}
+          priority
+        />
       </div>
       <Message context={homepage.attributes.message}/>
-      <Countdown targetDate={marriageDate}/>
+      <Countdown targetDate={ashevilleDate}/>
       <Timeline events={homepage.attributes.timeline} pastEventPhotos={pastEventPhotos}/>
     </Layout>
   );
@@ -33,7 +47,8 @@ export async function getStaticProps() {
       populate: {
         seo: { populate: "*" },
         message: { populate: "*" },
-        timeline: { populate: "*" }
+        timeline: { populate: "*" },
+        hero: { populate: "*" }
       },
     }),
     fetchAPI("/past-events", {

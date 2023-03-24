@@ -1,3 +1,9 @@
 .hero {
     padding: 0;
 }
+
+@media (min-width: 768px) {
+    .hero {
+        margin: 20px auto;
+    }
+}
