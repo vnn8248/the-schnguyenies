@@ -110,9 +110,9 @@
     opacity: 0.5;
 }
 
-.past+div>div {
+/* .timeline:first-child:not(.past) {
     border: 10px double #FF9F55;
-}
+} */
 
 .button {
     position: relative;
@@ -125,6 +125,11 @@
 .button:hover {
     background-color: #d1f3f5;
     border: 5px double #FF9F55;
+    color: black;
+    text-decoration: underline;
+}
+
+.button a {
     color: black;
 }
 
