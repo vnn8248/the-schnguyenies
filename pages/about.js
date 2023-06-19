@@ -20,6 +20,15 @@ const About = ({ about }) => {
 
     return (
         <Layout>
+            <div className={`container ${styles.hero}`}>
+                <Image 
+                    src={process.env.HERO_ABOUT_IMG}
+                    alt='White Sands National Park'
+                    width={6567}
+                    height={4378}
+                    priority
+                />
+            </div>
             <div className={`container-fluid ${styles.containerMessage}`}>
                 <Message context={storyBlocks} />
             </div>
