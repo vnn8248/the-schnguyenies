@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import styles from '../styles/Timeline.module.css';
 import Button from "react-bootstrap/Button";
 import Modal from "./modal";
@@ -6,7 +6,10 @@ import ReactMarkdown from "react-markdown";
 
 const Timeline = ({ events, pastEventPhotos }) => {
 
-    const [modalShow, setModalShow] = React.useState(false);
+    const [modalShow, setModalShow] = useState(false);
+    const [location, setLocation] = useState(null);
+    const [photos, setPhotos] = useState([]);
+
 
     return (
         <div className={`container ${styles.container}`}>
@@ -16,6 +19,14 @@ const Timeline = ({ events, pastEventPhotos }) => {
             {events.map((e, i) => {
 
                 const eventState = (new Date(e.date)).getTime() < Date.now() ? styles.past : styles.future;
+
+                const eventPhotos = pastEventPhotos.map(i => {
+                    if (i.attributes.location === e.location) {
+                        return i;
+                    }
+                }).filter((element) => {
+                    return element !== undefined;
+                });
 
                 // White Sands album sharing
                 // Google photos sharing link
@@ -48,12 +59,21 @@ const Timeline = ({ events, pastEventPhotos }) => {
                                 <h2>{e.location}</h2>
                                 <h3>{e.date}</h3>
                                 <ReactMarkdown>{e.description}</ReactMarkdown>
-                                <Button className={styles.button} onClick={() => setModalShow(true)}>Pictures!</Button>
+                                <Button 
+                                className={styles.button} 
+                                onClick={() => {
+                                    setModalShow(true); 
+                                    setLocation(e.location); 
+                                    setPhotos(eventPhotos)
+                                }}>
+                                    Pictures!
+                                </Button>
                                 <Modal
                                     show={modalShow}
                                     onHide={() => setModalShow(false)}
                                     pastevent="true"
-                                    pasteventphotos={pastEventPhotos}
+                                    pasteventphotos={photos}
+                                    location={location}
                                 />
                             </div>
                         </div>
@@ -84,7 +104,7 @@ const Timeline = ({ events, pastEventPhotos }) => {
                                         show={modalShow}
                                         onHide={() => setModalShow(false)}
                                         pastevent="true"
-                                        pasteventphotos={pastEventPhotos}
+                                        pasteventphotos={eventPhotos}
                                     />
                                 </div>
                             </div>

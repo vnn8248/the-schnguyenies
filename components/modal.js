@@ -5,6 +5,7 @@ import ModalCarousel from './modalCarousel';
 import ReactMarkdown from "react-markdown";
 
 const MessageModal = (props) => {
+    console.log(props)
     // Timeline past event photos modal
     if (props.pastevent && props.pasteventphotos) {
       const pictures = props.pasteventphotos;
@@ -18,7 +19,7 @@ const MessageModal = (props) => {
           >
             <Modal.Header closeButton>
               <Modal.Title id="contained-modal-title-vcenter">
-                Pictures from Miami!
+                Pictures from {props.location}!
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
