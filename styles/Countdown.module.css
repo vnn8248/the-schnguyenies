@@ -3,7 +3,7 @@ No media query for `xs` since this is the default in Bootstrap */
 .container {
     border: 1px solid rgba(61, 64, 91, .1);
     box-shadow: 0 3px 8px rgb(61 64 91 / 5%);
-    background-image: url('/asheville.jpeg');
+    background-image: url('/washington-dc.jpeg');
     background-position: center;
     background-size: cover;
     height: 100vh;

@@ -27,7 +27,7 @@ const Countdown = ({ targetDate }) => {
       <div className={`${styles.container}`}>
         <div className={styles.wrapper}>
           <h2 className={styles.nextEvent}>
-            Asheville, NC
+            Washington D.C.
           </h2>
           <ShowCounter
             days={days}

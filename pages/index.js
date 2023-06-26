@@ -26,7 +26,7 @@ const Home = ({ homepage, pastEventPhotos }) => {
         />
       </div>
       <Message context={homepage.attributes.message}/>
-      <Countdown targetDate={ashevilleDate}/>
+      <Countdown targetDate={dcDate}/>
       <Timeline events={homepage.attributes.timeline} pastEventPhotos={pastEventPhotos}/>
     </Layout>
   );
