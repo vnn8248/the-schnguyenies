@@ -99,12 +99,19 @@ const Timeline = ({ events, pastEventPhotos }) => {
                                     <h2>{e.location}</h2>
                                     <h3>{e.date}</h3>
                                     <ReactMarkdown>{e.description}</ReactMarkdown>
-                                    <Button className={styles.button} onClick={() => setModalShow(true)}>Pictures!</Button>
+                                    <Button className={styles.button} onClick={() => {                                    
+                                        setModalShow(true); 
+                                        setLocation(e.location); 
+                                        setPhotos(eventPhotos)
+                                    }}>
+                                        Pictures!
+                                    </Button>
                                     <Modal
                                         show={modalShow}
                                         onHide={() => setModalShow(false)}
                                         pastevent="true"
-                                        pasteventphotos={eventPhotos}
+                                        pasteventphotos={photos}
+                                        location={location}
                                     />
                                 </div>
                             </div>
