@@ -13,7 +13,6 @@ function ModalCarousel({ pictureData }) {
                     return (
                         <Carousel.Item key={pic.id}>
                             <Image 
-                                className="d-block w-100"
                                 alt={picData.alternativeText}
                                 src={picData.url}
                                 width={picData.width}
