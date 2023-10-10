@@ -8,16 +8,17 @@ import Countdown from "../components/countdown";
 import Timeline from "../components/timeline";
 import styles from "../styles/Home.module.css";
 
-const Home = ({ homepage, pastEventPhotos }) => {  
+const Home = ({ homepage, pastEventPhotos }) => {
   const marriageDate = new Date("March 12, 2023").getTime();
   const ashevilleDate = new Date("June 24, 2023").getTime();
   const dcDate = new Date("September 30, 2023").getTime();
-  
+  const done = null;
+
   return (
     <Layout >
       <Seo seo={homepage.attributes.seo} />
       <div className={`container ${styles.hero}`}>
-        <Image 
+        <Image
           src={process.env.HERO_HOME_IMG}
           alt='Jessie and Bi are married at White Sands National Park'
           width={6567}
@@ -25,16 +26,16 @@ const Home = ({ homepage, pastEventPhotos }) => {
           priority
         />
       </div>
-      <Message context={homepage.attributes.message}/>
-      <Countdown targetDate={dcDate}/>
-      <Timeline events={homepage.attributes.timeline} pastEventPhotos={pastEventPhotos}/>
+      <Message context={homepage.attributes.message} />
+      <Countdown targetDate={done} />
+      <Timeline events={homepage.attributes.timeline} pastEventPhotos={pastEventPhotos} />
     </Layout>
   );
 };
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [ homepageRes, pastEventPhotos ] = await Promise.all([
+  const [homepageRes, pastEventPhotos] = await Promise.all([
     fetchAPI("/homepage", {
       populate: {
         seo: { populate: "*" },
